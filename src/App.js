@@ -10,8 +10,6 @@ function App() {
     .then(data => setMarkdown(data))
   },[])
   
-  console.log(markdown)
-
   return (
     <div className="app">
 
