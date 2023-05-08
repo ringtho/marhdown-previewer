@@ -10,6 +10,7 @@ function App() {
     .then(data => setMarkdown(data))
   },[])
   
+  console.log(markdown)
 
   return (
     <div className="app">
@@ -20,8 +21,7 @@ function App() {
           <h3>Editor</h3>
           <i className="fa fa-arrows-alt"></i>
         </div>
-        <textarea id="editor">
-          Smith Ringtho
+        <textarea id="editor" defaultValue={markdown}>
         </textarea>
       </section>
       <section className="preview-container">
