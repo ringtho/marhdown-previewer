@@ -9,6 +9,7 @@ function App() {
     .then(res => res.text())
     .then(data => setMarkdown(data))
   },[])
+
   
   return (
     <div className="app">
@@ -19,7 +20,7 @@ function App() {
           <h3>Editor</h3>
           <i className="fa fa-arrows-alt"></i>
         </div>
-        <textarea id="editor" defaultValue={markdown}>
+        <textarea id="editor" onChange={e => setMarkdown(e.target.value)} value={markdown}>
         </textarea>
       </section>
       <section className="preview-container">
