@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import React, { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
-function App() {
-  const [markdown, setMarkdown] = useState("")
-  
-  useEffect(()=> {
-    fetch("markdown.md")
-    .then(res => res.text())
-    .then(data => setMarkdown(data))
-  },[])
+function App () {
+  const [markdown, setMarkdown] = useState('')
+  useEffect(() => {
+    fetch('markdown.md')
+      .then(res => res.text())
+      .then(data => setMarkdown(data))
+  }, [])
 
-  
   return (
     <div className="app">
 
@@ -31,11 +29,13 @@ function App() {
           <i className="fa fa-arrows-alt"></i>
         </div>
         <div id="preview">
-          <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {markdown}
+          </ReactMarkdown>
         </div>
       </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
