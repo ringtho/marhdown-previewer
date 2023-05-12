@@ -136,20 +136,31 @@ blockquote {
 }
 
 table {
-  border-spacing: 2px;
-  border-color: gray;
   text-align: left;
 }
 
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
 #preview img {
+  display: block;
   width: 90%;
+  text-align: center;
   margin: 2rem auto;
-  border: 2px solid red;
 }
 
 .previewer-open,
 .editor-open {
   display: none;
 }
+
+ol, ul {
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+
 
 
