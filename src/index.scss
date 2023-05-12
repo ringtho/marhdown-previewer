@@ -55,20 +55,30 @@ body {
   @include font-designs(monospace, 0.875rem, #c0d8d8);
   width: 100%;
   outline: none;
-  min-height: 200px;
-  height: 290px;
   resize: vertical;
   border-top: none;
   padding: 5px 2px 2px 5px;
   text-align: left;
 }
 
+.textarea-full {
+  min-height:100vh;
+  height: auto;
+}
+
+.textarea-closed {
+  min-height: 200px;
+  height: 290px;
+}
+
 .fa-free-code-camp {
   margin-left: 5px;
 }
 
-.fa-arrows-alt {
+.fa-arrows-alt,
+.fa-compress-arrows-alt {
   margin-left: auto;
+  cursor: pointer;
 }
 
 #preview {
@@ -127,3 +137,10 @@ table {
   margin: 2rem auto;
   border: 2px solid red;
 }
+
+.previewer-open,
+.editor-open {
+  display: none;
+}
+
+
